@@ -44,4 +44,6 @@ def watch_video(url: str) ->list:
     return frame_b64
 
 if __name__ =="__main__":
-    mcp.run(transport="sse")
+    import uvicorn
+    app = mcp.sse_app()
+    uvicorn.run(app,host="0.0.0.0",port=8000)
