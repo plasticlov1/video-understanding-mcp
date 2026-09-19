@@ -12,7 +12,7 @@ def frame_diff(frame1,frame2):
             return np.mean(diff)
 
 @mcp.tool()
-def watch_video(url: str) ->list:
+def watch_video(url: str) -> str:  
     #从URL下载视频到临时文件
     r = requests.get(url)
     tmp = tempfile.NamedTemporaryFile(suffix=".mp4",delete=False)
@@ -41,7 +41,7 @@ def watch_video(url: str) ->list:
         prev_frame = frame
         frame_count+=1
     video.release()
-    return frame_b64
+    return str(frame_b64)
 
 if __name__ =="__main__":
     import uvicorn
