@@ -1,4 +1,4 @@
-mcp[sse]
+mcp[sse]<2
 opencv-python-headless
 numpy
 requests
