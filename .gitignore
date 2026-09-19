@@ -1,0 +1,5 @@
+frames/
+*.png
+*.mp4
+__pycache__/
+.env
