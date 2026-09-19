@@ -44,4 +44,4 @@ def watch_video(url: str) ->list:
     return frame_b64
 
 if __name__ =="__main__":
-    mcp.run()
+    mcp.run(transport="sse")
