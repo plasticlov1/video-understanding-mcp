@@ -5,7 +5,7 @@ import requests
 import tempfile
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("video-watcher")
+mcp = FastMCP("video-watcher",host="0.0.0.0",port=8000)
 
 def frame_diff(frame1,frame2):
             diff = cv2.absdiff(frame1,frame2)
