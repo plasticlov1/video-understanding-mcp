@@ -36,8 +36,8 @@ def watch_video(url: str):
             diff = frame_diff(prev_frame,frame)
             if diff >= 30 or frame_count % (fps * 3)==0:
                 _,buf = cv2.imencode(".jpg",frame)
-	        if len(frame_images) <15 :
-			frame_images.append(Image(data=buf.tobytes(), format="jpeg"))
+                if len(frame_images) <15 :
+                    frame_images.append(Image(data=buf.tobytes(), format="jpeg"))
                 
         prev_frame = frame
         frame_count+=1
